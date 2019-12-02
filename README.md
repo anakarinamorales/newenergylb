@@ -1,4 +1,4 @@
-#NewEnergyLB
+# NewEnergyLB
 
 This is a Load Balancer (LB) developed using the parallel programming model CHARM++. The LB applies DVFS (Dynamic Voltage and Frequency Scaling) techniques instead of tasks distribution (process of migrating objects between cores).
 
@@ -15,7 +15,7 @@ Here are some links that may help:
 To validate the proposal, the following equipment/configuration was used:
 A PC with Intel Core I7-4810MQ and Linux Mint OS with kernel version 4.13.0. The version of CHARM ++ used was 6.5.1 with g++ v5.4.0.
 
-###Basic instalation
+### Basic instalation
 
 1. Install g++
 ```bash
@@ -42,7 +42,7 @@ $ ./build charm++ multicore-linux64
 $ echo 'export PATH=$PATH:~/charm/bin' >> /home/your_user/.bashrc
 ```
 
-###Configuring cpufreq
+### Configuring cpufreq
 
 To use the load balancer, the cpufreq `userspace` mode need to be enabled, and for that, first you need to disable the intel driver. So, while at the GRUB menu:
 
@@ -57,7 +57,7 @@ $ cpufreq-set -g userspace -c 0
 ```
 Ps.: do it for all your cores (-c0, -c 1, -c 2, ...).
 
-###Testing the load balancer
+### Testing the load balancer
 
 1. Enter your CHARM++ folder 
 Open Makefile_lb.sh in your text editor and include the name of the new load balancer(NewEnergyLB) in OTHER_LDBS. Save it.
